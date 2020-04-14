@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if current_user.is_authenticated %}
+<div class="center"><h1>My Jobs</h1></div>
+
+<div class="center my-list">
+
+    <table width="100%">
+
+        {% for item in jobs%}
+        <tr align="left">
+            <td>Action # {{ item.id }}</td>
+        </tr>
+    <tr align="left">
+        <th class="standard-head">Title of activity</th>
+        <th class="standard-head">Team leader</th>
+        <th class="standard-head">Duration</th>
+        <th class="standard-head">List of collaborators</th>
+        <th class="standard-head">Is finished</th>
+    </tr>
+
+    <tr align="left">
+        <td class="standard-cell">{{ item.job }}</td>
+        <td class="standard-cell">{{ item.leader.name }} {{ item.leader.surname }}</td>
+        <td class="standard-cell">{{ item.work_size }} hours</td>
+        <td class="standard-cell">{{ item.collaborators }}</td>
+        <td bgcolor="{% if not item.is_finished %}#ffeefe{% else %}#eefffe{% endif %}">Is {% if not item.is_finished %}not {% endif %}finished</td>
+    </tr>
+
+        {% endfor %}
+    </table>
+
+</div>
+
+<p>
+    <a class="btn btn-primary " href="/addjob">Add job</a>
+</p>
+
+{% endif %}
+
+{% endblock %}

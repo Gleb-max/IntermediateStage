@@ -1,0 +1,48 @@
+.translucent {
+    color: #d3d7cf;
+}
+
+.center {
+    text-align: center;
+}
+
+.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.my-list {
+      margin-left: 5%;
+}
+
+h4{
+    color: red;
+    margin-left: 20px;
+}
+
+form.my_form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.standard-cell {
+    background: #edeefe;
+}
+
+.standard-head {
+    background: #dcdcdc;
+}
+
+.top-caption {
+    caption-side: top;
+}
+
+.action {
+    padding: 10px;
+}
